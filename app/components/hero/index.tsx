@@ -5,11 +5,10 @@ import GithubCTA from "./components/github-cta";
 
 const HeroSection = () => {
   return (
-    <Stack
+    <Box
+      h={{ base: "85vh", sm: "95vh" }}
       bgImage="/home-bg.jpg"
-      h="95vh"
       objectFit="cover"
-      overflow="hidden"
       bgPos="40% 50%"
       pos="relative"
       _after={{
@@ -23,14 +22,18 @@ const HeroSection = () => {
         zIndex: 9,
       }}
     >
-      <Stack zIndex={99} h="100%">
-        <Navbar />
+      <Stack h="100%">
+        <Stack zIndex={999}>
+          <Navbar />
+        </Stack>
+
         <Grid
           gridTemplateColumns={{ base: "1fr", sm: "repeat(5,1fr)" }}
-          gridTemplateRows="1fr 1fr max-content"
+          gridTemplateRows="1fr 1fr auto"
           gap={4}
           marginX={marginX}
           h="100%"
+          zIndex={999}
         >
           <GridItem
             gridRowStart={3}
@@ -77,7 +80,7 @@ const HeroSection = () => {
         </Grid>
       </Stack>
       <GithubCTA />
-    </Stack>
+    </Box>
   );
 };
 

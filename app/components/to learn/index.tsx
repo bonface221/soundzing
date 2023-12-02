@@ -21,7 +21,7 @@ const listItems = [
 const WhatYouWillLearn = () => {
   return (
     <Box bg="brand.black">
-      <Box marginX={marginX} py="10rem">
+      <Box marginX={marginX} py={{ base: "6rem", sm: "10rem" }}>
         <Grid
           gridTemplateColumns={{ base: "1fr", md: "repeat(1fr,100px,1fr)" }}
           gap="30px"
@@ -66,7 +66,11 @@ const WhatYouWillLearn = () => {
                 alt="what to learn image"
               />
             </Box>
-            <Box position="absolute" bottom={-20} right={{ base: -4, md: -5 }}>
+            <Box
+              position="absolute"
+              bottom={{ base: -10, sm: -20 }}
+              right={{ base: -4, md: -5 }}
+            >
               <Image src="/angle-yellow.svg" alt="angle" />
             </Box>
           </GridItem>

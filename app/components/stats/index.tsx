@@ -23,6 +23,7 @@ const Stats = () => {
       <SimpleGrid
         columns={{ base: 1, sm: 2 }}
         mx={marginX}
+        spacing={{ base: 10, sm: 20 }}
         pos="relative"
         _before={{
           content: "url('/angle-red.svg')",

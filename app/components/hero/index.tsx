@@ -1,6 +1,7 @@
 import { Box, Button, Grid, GridItem, Heading, Stack } from "@chakra-ui/react";
 import Navbar from "../navbar";
 import { marginX } from "@/app/constants";
+import GithubCTA from "./components/github-cta";
 
 const HeroSection = () => {
   return (
@@ -75,6 +76,7 @@ const HeroSection = () => {
           </GridItem>
         </Grid>
       </Stack>
+      <GithubCTA />
     </Stack>
   );
 };

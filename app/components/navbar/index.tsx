@@ -1,9 +1,10 @@
 import { marginX } from "@/app/constants";
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import Link from "next/link";
+import MobileNav from "./components/mobile-nav";
 
 // course Details Blog Testimonials
-const navItems = [
+export const navItems = [
   {
     id: 1,
     text: "About",
@@ -33,6 +34,7 @@ const Navbar = () => {
         bg="rgba(0, 0, 0, 0.50)"
         backdropFilter="blur(20px)"
         justify="space-between"
+        align="center"
         marginX={marginX}
         borderRadius="10px"
         p="1.2rem"
@@ -44,13 +46,16 @@ const Navbar = () => {
             DZing
           </Box>
         </Heading>
-        <Flex gap={4}>
+        <Flex gap={4} display={{ base: "none", md: "flex" }}>
           {navItems.map((item) => (
             <Text key={item.id} fontSize="xl">
               <Link href={item.link}>{item.text}</Link>
             </Text>
           ))}
         </Flex>
+        <Box display={{ base: "block", md: "none" }}>
+          <MobileNav />
+        </Box>
       </Flex>
     </Box>
   );

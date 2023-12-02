@@ -1,5 +1,6 @@
 import { Box, Button, Grid, GridItem, Heading, Stack } from "@chakra-ui/react";
 import Navbar from "../navbar";
+import { marginX } from "@/app/constants";
 
 const HeroSection = () => {
   return (
@@ -18,21 +19,21 @@ const HeroSection = () => {
         width: "100%",
         height: "100%",
         background: "rgba(0,0,0,0.4)",
-        zIndex: 999,
+        zIndex: 9,
       }}
     >
-      <Stack zIndex={9999} h="100%">
+      <Stack zIndex={99} h="100%">
         <Navbar />
         <Grid
-          gridTemplateColumns="1fr 1fr 1fr 400px 1fr"
+          gridTemplateColumns={{ base: "1fr", sm: "repeat(5,1fr)" }}
           gridTemplateRows="1fr 1fr max-content"
           gap={4}
+          marginX={marginX}
           h="100%"
         >
           <GridItem
             gridRowStart={3}
-            gridRowEnd={10}
-            gridColumn="4/5"
+            gridColumn={{ base: "auto", sm: "4/5" }}
             color="brand.white"
           >
             <Stack
@@ -43,6 +44,7 @@ const HeroSection = () => {
               backdropFilter="blur(25px)"
               borderTopRadius="20px"
               gap="30px"
+              minW={{ base: "100%", sm: "400px" }}
             >
               <Box
                 as="h3"
@@ -60,7 +62,7 @@ const HeroSection = () => {
               </Box>
               <Heading
                 fontFamily='Alegreya "Open Sans"'
-                fontSize="40px"
+                fontSize={{ base: "30px", sm: "40px" }}
                 fontWeight={700}
                 lineHeight="normal"
               >

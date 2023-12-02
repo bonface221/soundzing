@@ -1,3 +1,15 @@
+import HeroSection from "./components/hero";
+import LatestPosts from "./components/latest-posts";
+import Stats from "./components/stats";
+import WhatYouWillLearn from "./components/to learn";
+
 export default function Home() {
-  return <h1>Cool</h1>;
+  return (
+    <>
+      <HeroSection />
+      <WhatYouWillLearn />
+      <Stats />
+      <LatestPosts />
+    </>
+  );
 }

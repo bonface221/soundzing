@@ -11,7 +11,7 @@ export const sharedMetadata: Metadata = {
     description:
       "Check out the Figma design project that Boniface Maina has been working on. It's responsive across all devices, ranging from desktop to mobile screens. Learn more about the design process and how to use Figma effectively.",
     url: "https://bonface221-soudzing.netlify.app/",
-    siteName: "Tech with Boni",
+    siteName: "SoundDZing",
     type: "website",
     locale: "en_US",
     images: [

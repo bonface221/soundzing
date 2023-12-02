@@ -4,8 +4,7 @@ export const theme = extendTheme({
   components: {
     Text: {
       baseStyle: {
-        fontSize: "1.5rem",
-        fontweight: "400",
+        fontweight: "600",
         fontStyle: "normal",
         color: "brand.white",
       },
@@ -16,6 +15,8 @@ export const theme = extendTheme({
     brand: {
       main: "#FF6864",
       gray: "#181E1E",
+      red: "#E63946",
+      yellow: "#FFCA28",
       black: "#000",
       white: "#FFFF",
     },

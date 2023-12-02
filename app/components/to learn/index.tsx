@@ -23,7 +23,7 @@ const WhatYouWillLearn = () => {
     <Box bg="brand.black">
       <Grid
         gridTemplateColumns="repeat(1fr, 100px,1fr)"
-        py="80px"
+        py="10rem"
         mx={marginX}
         gap="30px"
       >
